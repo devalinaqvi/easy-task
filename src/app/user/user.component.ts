@@ -11,5 +11,5 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  selectedUserId = DUMMY_USERS[randomIndex];
+  selectedUser = DUMMY_USERS[randomIndex];
 }
