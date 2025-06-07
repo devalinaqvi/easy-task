@@ -16,4 +16,7 @@ export class UserComponent {
   get ImageUrl() {
     return `assets/users/${this.selectedUser.avatar}`;
   }
+  onSelectUser(userId: string) {
+    this.selectedUser = DUMMY_USERS.find(user => user.id === userId) || this.selectedUser;
+  }
 }
