@@ -18,5 +18,6 @@ export class UserComponent {
   }
   onSelectUser(userId: string) {
     this.selectedUser = DUMMY_USERS.find(user => user.id === userId) || this.selectedUser;
+    console.log('Selected User:', this.selectedUser);
   }
 }
