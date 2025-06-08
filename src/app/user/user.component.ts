@@ -14,7 +14,7 @@ export class UserComponent {
   selectedUser = signal(DUMMY_USERS[randomIndex]);
 
   get ImageUrl() {
-    return `assets/users/${this.selectedUser.avatar}`;
+    return `assets/users/${this.selectedUser().avatar}`;
   }
   onSelectUser(userId: string) {
     const foundUser = DUMMY_USERS.find(user => user.id === userId);
