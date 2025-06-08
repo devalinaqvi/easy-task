@@ -17,11 +17,9 @@ export class UserComponent {
     return `assets/users/${this.selectedUser.avatar}`;
   }
   onSelectUser(userId: string) {
-    this.selectedUser = DUMMY_USERS.find(user => user.id === userId) || this.selectedUser;
-    console.log('Selected User:', this.selectedUser);
-    const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
-    // this.selectedUser = DUMMY_USERS[randomIndex];
-    this.selectedUser.set(DUMMY_USERS[randomIndex]);
-    console.log('Changed User:', this.selectedUser);
+    const foundUser = DUMMY_USERS.find(user => user.id === userId);
+    if (foundUser) {
+      this.selectedUser.set(foundUser);
+    }
   }
 }
