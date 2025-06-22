@@ -17,7 +17,9 @@ export class UserComponent {
   //   return `assets/users/${this.selectedUser().avatar}`;
   // }
 
-  imagePath = computed(() => `assets/users/${this.selectedUser().avatar}`);
+  imagePath() {
+    return `assets/users/${this.selectedUser().avatar}`;
+  }
 
   onSelectUser(userId: string) {
     const foundUser = DUMMY_USERS.find(user => user.id === userId);
