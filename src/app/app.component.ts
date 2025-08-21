@@ -14,4 +14,8 @@ import { DUMMY_USERS } from "./user/dummy-users";
 export class AppComponent {
   title = 'my-first-ng-project';
   users = DUMMY_USERS;
+  
+  onSelectUser(userId: string) {
+    console.log('Selected User ID:', userId);
+  }
 }
