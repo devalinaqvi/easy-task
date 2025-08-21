@@ -12,7 +12,7 @@ import { DUMMY_USERS } from "./user/dummy-users";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'my-first-ng-project';
+  title = 'Easy Task';
   users = DUMMY_USERS;
   
   onSelectUser(userId: string) {
